@@ -1,0 +1,10 @@
+my:
+  config:
+    url: www.larscheng.com
+    port: 80
+    user: [lars,liming,zhangsan]
+    password:
+      lars: 123456
+      liming: 666666
+      zhangsan: 123123
+      wangwu: ${random.uuid}

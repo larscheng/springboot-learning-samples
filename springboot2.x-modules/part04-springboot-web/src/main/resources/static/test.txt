@@ -1,0 +1,6 @@
+静态资源存放路径
+优先级高到低： resources、static、public、classpath
+
+默认 static
+
+templates是springboot中的web-inf、但是需要引入thymeleaf模板引擎依赖才可使用
