@@ -1,3 +1,11 @@
 spring:
   messages:
     basename: i18n.message
+
+
+
+
+
+
+hello:
+  msg: larscheng-spring-boot-start
