@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Custom Logout Page</h1>
+<form th:action="@{/logoutPageCustom}" method="post">
+    <!--用户名验证操作交给springboot security-->
+    <input type="submit" value="Log Out"/>
+</form>
+</body>
+</html>

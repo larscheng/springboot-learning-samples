@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Custom Login Page</h1>
+<form th:action="@{/loginPageCustom}" method="post">
+    <!--用户名验证操作交给springboot security-->
+    <input type="text" name="username" id="username"/> <br>
+    <input type="password" name="password" id="password"/><br>
+    <input type="submit" value="Log in"/>
+</form>
+</body>
+</html>

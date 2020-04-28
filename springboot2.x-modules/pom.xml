@@ -13,12 +13,15 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>larscheng-spring-boot-starter</module>
         <module>part01-springboot-helloworld</module>
         <module>part02-springboot-config</module>
         <module>part03-springboot-multienv</module>
         <module>part04-springboot-web</module>
         <module>part05-springboot-thymeleaf-i18n</module>
-        <module>larscheng-spring-boot-starter</module>
+        <module>part06-springboot-security</module>
+        <module>part07-springboot-h2-jpa</module>
+        <module>part08-springboot-security-custom-authenticate</module>
     </modules>
 
 

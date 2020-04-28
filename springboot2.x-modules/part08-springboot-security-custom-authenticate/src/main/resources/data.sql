@@ -1,0 +1,1 @@
+INSERT INTO USER VALUES(1, 'test','$2y$12$kLSU07TzBuWLDn9hSb8iy.6Bsc9a8kv4K.kIHpdj3i6/6uK0UZq7y');
