@@ -22,6 +22,7 @@
         <module>part06-springboot-security</module>
         <module>part07-springboot-h2-jpa</module>
         <module>part08-springboot-security-custom-authenticate</module>
+        <module>part12-springboot-swagger-knife4j</module>
     </modules>
 
 
