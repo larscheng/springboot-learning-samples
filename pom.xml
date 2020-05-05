@@ -11,7 +11,9 @@
     <modules>
         <module>springboot2.x-modules</module>
     </modules>
-
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
 
 <!--    &lt;!&ndash; 管理依赖版本号,子项目不会默认依赖,需要手动声明引入ga&ndash;&gt;-->
 <!--    <dependencyManagement>-->
@@ -26,5 +28,19 @@
 <!--            </dependency>-->
 <!--        </dependencies>-->
 <!--    </dependencyManagement>-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <!--指定Java版本-->
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

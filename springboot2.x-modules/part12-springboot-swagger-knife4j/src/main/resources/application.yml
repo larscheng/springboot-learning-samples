@@ -3,8 +3,3 @@ server:
 spring:
   application:
     name: SwaggerBootstrapUi-Demo
-knife4j:
-  basic:
-    enable: false
-    username: zhangsan
-    password: 123456

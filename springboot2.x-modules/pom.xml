@@ -22,6 +22,8 @@
         <module>part06-springboot-security</module>
         <module>part07-springboot-h2-jpa</module>
         <module>part08-springboot-security-custom-authenticate</module>
+        <module>part09-springboot-jwt</module>
+        <module>part10-springboot-oauth2</module>
         <module>part12-springboot-swagger-knife4j</module>
     </modules>
 
@@ -72,13 +74,5 @@
     </dependencyManagement>
 
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>
