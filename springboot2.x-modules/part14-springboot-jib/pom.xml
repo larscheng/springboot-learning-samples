@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>springboot2.x-modules</artifactId>
+        <groupId>com.larscheng.www</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>part14-springboot-jib</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>part14-springboot-jib</name>
+    <description>Demo project for Spring Boot</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+
+<!--        <registry_username>jenkins</registry_username>-->
+<!--        <registry_password>Senthink@123</registry_password>-->
+        <registry_username>admin</registry_username>
+        <registry_password>senthink123!</registry_password>
+        <registry_url>harbor.senthink.com</registry_url>
+    </properties>
+
+    <dependencies>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!--jib 构建插件-->
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>1.0.1</version>
+                <configuration>
+                    <from>
+                        <image>harbor.senthink.com/base/jdk8</image>
+                        <!--直接指定凭证（替代credHelper）-->
+                        <auth>
+                            <username>${registry_username}</username>
+                            <password>${registry_password}</password>
+                        </auth>
+                    </from>
+                    <to>
+                        <image>${registry_url}/zhengql/${project.artifactId}</image>
+                        <auth>
+                            <username>${registry_username}</username>
+                            <password>${registry_password}</password>
+                        </auth>
+                        <tags>
+                            <tag>latest</tag>
+                        </tags>
+
+                    </to>
+                    <container>
+                        <mainClass>com.larscheng.www.Part14SpringbootJibApplication</mainClass>
+                        <!--使用当前时间-->
+                        <useCurrentTimestamp>true</useCurrentTimestamp>
+                        <!--容器在运行时暴露的端口-->
+                        <ports>
+                            <port>5699</port>
+                        </ports>
+                    </container>
+                    <!--如果私有镜像仓库没有启用https，设置allowInsecureRegistries参数为true-->
+<!--                    <allowInsecureRegistries>true</allowInsecureRegistries>-->
+                </configuration>
+                <!--绑定jib:build到 Maven生命周期，例如package-->
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>build</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>
