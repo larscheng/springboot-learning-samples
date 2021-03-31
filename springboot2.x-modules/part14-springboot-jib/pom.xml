@@ -15,12 +15,9 @@
 
     <properties>
         <java.version>1.8</java.version>
-
-<!--        <registry_username>jenkins</registry_username>-->
-<!--        <registry_password>Senthink@123</registry_password>-->
-        <registry_username>admin</registry_username>
-        <registry_password>senthink123!</registry_password>
-        <registry_url>harbor.senthink.com</registry_url>
+        <registry_username>xxx</registry_username>
+        <registry_password>xxx</registry_password>
+        <registry_url>xxx</registry_url>
     </properties>
 
     <dependencies>
