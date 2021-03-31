@@ -8,12 +8,8 @@ import java.io.Serializable;
 /**
  * The type Page param.
  *
- * @Project : Columbia
  * @Package Name : com.senthink.www.domain.param
  * @Class Name : ${CLASS_NAME}
- * @Description :
- * @Author : lingcy@lierda.com
- * @Creation Date : 2016年11月23日 上午11:29
  * @ModificationHistory Who When What -------- ----------
  *                      -----------------------------------
  */
